@@ -15,7 +15,6 @@ def fill_pdf_form(pdf_file, json_data):
 
         # Get the form fields from the PDF for debugging
         fields = fillpdfs.get_form_fields(temp_path)
-        st.write("Found PDF fields:", fields)  # Debug: Show field names
 
         # Map JSON data to PDF form fields (using field names from fillpdfs output)
         field_mapping = {
