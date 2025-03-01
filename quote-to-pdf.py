@@ -88,14 +88,12 @@ def main():
     col1, col2 = st.columns(2)
     
     # PDF Upload in first column
-    with col1:
-        st.subheader("Upload PDF Document")
-        uploaded_pdf = st.file_uploader("Choose a PDF file", type="pdf", help="Upload a fillable PDF document")
+    st.subheader("Upload PDF Document")
+    uploaded_pdf = st.file_uploader("Choose a PDF file", type="pdf", help="Upload a fillable PDF document")
     
     # JSON input in second column
-    with col2:
-        st.subheader("Enter Form Data (JSON)")
-        default_json = '''{
+    st.subheader("Enter Form Data (JSON)")
+    default_json = '''{
   "CustomerName": "John Doe",
   "ContactName": "Jane Doe",
   "ServiceAddress": "123 Main Street",
@@ -114,7 +112,7 @@ def main():
   "AgreementCheckbox1": true
 }'''
         
-        json_input = st.text_area("JSON Data", value=default_json, height=250)
+    json_input = st.text_area("JSON Data", value=default_json, height=250)
     
     # Generate button
     if st.button("🔄 Fill PDF", type="primary"):
