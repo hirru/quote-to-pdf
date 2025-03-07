@@ -4,4 +4,7 @@ pymupdf
 pdfplumber  
 reportlab  
 pytz 
-python-dotenv  
+python-dotenv 
+langchain
+langchain-openai
+langchain-community
